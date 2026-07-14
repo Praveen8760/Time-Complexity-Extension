@@ -1,0 +1,64 @@
+{
+  "name": "time-complexity-analyzer",
+  "displayName": "Time Complexity Analyzer",
+  "description": "Analyzes the time complexity of code using an AI backend.",
+  "version": "0.0.1",
+  "publisher": "PraveenT",
+  "icon": "image/logo.jpeg",
+  "license":"MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages","AI","Visualization"
+  ],
+  "keywords": [
+    "time complexity",
+    "analyze",
+    "code analysis",
+    "ai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Praveen8760/Time-Complexity-Extension"
+  },
+  "bugs": {
+    "url": "https://github.com/Praveen8760/time-complexity-analyzer/issues"
+  },
+  "homepage": "https://github.com/Praveen8760/time-complexity-analyzer#readme",
+
+  "activationEvents": [
+    "onCommand:time-complexity-analyzer.analyzeCode"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "time-complexity-analyzer.analyzeCode",
+        "title": "Analyze Time Complexity"
+      }
+    ],
+    "configuration": {
+      "title": "Time Complexity Analyzer Settings",
+      "properties": {
+        "timeComplexityAnalyzer.apiUrl": {
+          "type": "string",
+          "default": "https://time-complexity-analyzer-production.up.railway.app/api/analyze",
+          "description": "The API endpoint URL used to analyze code time complexity."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "eslint": "^9.21.0",
+    "globals": "^15.15.0"
+  }
+}
+
